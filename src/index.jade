@@ -1,4 +1,28 @@
 extends _layouts/base
 
 block content
-    main.home
+    .popup
+        .popup__wrapper
+            img.popup__liberty(src="/images/popup/liberty.png")
+            button.popup__close
+                span
+                span
+            .popup__container
+                .popup__heading
+                    img.popup__logo(src="/images/popup/logo.png")
+                .popup__body
+                    h2.popup__intro Bienvenido a Mistral Club Us:
+                    h1.popup__title ¡La piscola llegó a Estados Unidos!
+                    h3.popup__subtitle Únete al club y obtiene
+                    h4.popup__prices Productos con descuentos - Despachos a domicilios - Participa por premios
+                    .popup__form
+                        .popup__form__group
+                            input.popup__form__input(type="text", placeholder="Nombre")
+                        .popup__form__group
+                            input.popup__form__input(type="text", placeholder="Email")
+                        .popup__form__group
+                            input.popup__form__input(type="text", placeholder="Teléfono*:")
+                        .popup__form__group
+                            input.popup__form__input(type="text", placeholder="Amigo que te contó*:")
+                        .popup__form__group
+                            button.popup__form__button(type="submit") Enviar

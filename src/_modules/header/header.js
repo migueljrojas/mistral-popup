@@ -2,19 +2,17 @@
 
 // Constructor
 var Header = function() {
-    var header = $('.header');
-    var body = $('body');
-    var menuOpen = $('.header__hamburguer');
-    var menuClose = $('.header__nav__close');
+    $( document ).ready(function() {
+        var popup = $('.popup');
+        var close = $('.popup__close');
 
-    menuOpen.on('click', function(){
-        header.addClass('-open');
-        body.addClass('-hideOverflow');
-    });
+        setTimeout(function(){
+            popup.addClass('-open');
+        }, 500);
 
-    menuClose.on('click', function(){
-        header.removeClass('-open');
-        body.removeClass('-hideOverflow');
+        close.on('click', function() {
+            popup.removeClass('-open');
+        });
     });
 };
 
